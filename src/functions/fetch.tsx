@@ -5,3 +5,4 @@ async function getData(url: string, options?: RequestInit) {
 }
 
 export default getData
+

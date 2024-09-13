@@ -1,5 +1,9 @@
+'use client'
+
 import Image from "next/image";
 import { SlMagnifier } from "react-icons/sl";
+
+import handleSearch from "@/functions/handleSearch";
 
 export default function NavBar() {
   return (
@@ -17,9 +21,10 @@ export default function NavBar() {
           <div className="flex-1 flex items-center justify-center">
             <div className="relative w-full max-w-lg">
               <input
+                onChange={(e) => handleSearch(e.target.value)}
                 type="text"
                 className="pl-4 pr-10 py-1 w-full bg-white text-black focus:outline-none"
-                placeholder="Busca tu superheroe"
+                placeholder="look for your favorite character"
               />             
             </div>
             <button className=" inset-y-0 right-0 flex items-center pr-3">
